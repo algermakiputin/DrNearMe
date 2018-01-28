@@ -1,0 +1,109 @@
+.container {
+	width: 77%;
+}
+
+.navbar {
+	background: #e21627 ;
+	border:solid  1px #333;
+}
+
+.navbar-brand {
+	font-size: 32.5px;
+}
+
+#main-title {
+	color: #fff;
+	font-weight: bold;
+}
+
+#sub-title {
+	font-weight: bold;
+}
+
+#main {
+	background: #fff;
+	background: url('../images/bg.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	min-height: 528px;
+	background-repeat: no-repeat;
+}
+
+#footer {
+	background: #333;
+	
+}
+
+#footer  p{
+	color: #fff;
+	margin: 0;
+	padding: 5px;
+}
+
+#col-1 {
+	padding: 35.5px 20px;
+}
+
+.search-btn{
+	background: #333;
+	border-top-right-radius: 13.5px;
+	border-bottom-right-radius: 13.5px;
+	box-shadow: 5px 5px 10px #777;
+	color: #fff;
+	font-size: 20.5px;
+	margin-left: 30px;
+	padding: 10px 20px;
+	width: 350px;
+	font-weight: bold;
+}
+
+.search-btn:hover {
+	opacity: 0.5;
+}
+
+#note {
+	margin-left: 30px;
+	padding: 5px 0;
+	font-size: 14px;
+	color: red;
+}
+
+#col-2 {
+	padding: 44px 0;
+
+	height: 500px;
+
+}
+
+#col-2 h1 {
+	line-height: 2.5;
+}
+
+#col-2 p {
+	font-size: 16.5px;
+}
+
+#download {
+	border:solid 1px #eee;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.icons .fa {
+	padding: 10px;
+	background: #4453c4;
+	font-size: 28px;
+	color: #fff;
+	border-radius: 5px;
+	width: 60px;
+	text-align: center;
+	box-shadow: 5px 5px 10px #000;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+#topnav p {
+	color: #eee;
+}
+
