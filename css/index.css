@@ -103,6 +103,11 @@
 	margin-top: 5px;
 }
 
+.icons .fa:hover {
+	background-color: #092756;
+	transition: 0.5s;
+}
+
 #topnav p {
 	color: #eee;
 }
