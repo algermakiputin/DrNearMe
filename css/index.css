@@ -1,9 +1,9 @@
 body {
-	background-color: #eee;
+	background-color: #f4f4f5;
 }
 
 .container {
-	width: 77%;
+
 }
 
 .navbar {
@@ -27,17 +27,21 @@ body {
 
 #sub-title {
 	font-weight: bold;
+	color: green;
 }
 
 #main {
 	background: #fff;
+	background-image: url("../images/bg.jpg");
 	background-position: center;
 	background-attachment: fixed;
 	min-height: 460px;
 	background-repeat: no-repeat;
 	position: relative;
-	margin: 40px 0 55px 0;
+	margin: 35px 0;
 	box-shadow: 0 0 3px #ccc;
+	
+
 }
 
 #search-form {
@@ -53,12 +57,12 @@ body {
 }
 
 #tf {
-	font-size: 28px;
+	font-size: 23px;
 	height: 60px;
 }
 
 #btn {
-	font-size: 28px;
+	font-size: 23px;
 	background:red;
 	color: #fff;
 }
@@ -149,20 +153,16 @@ body {
 }
 
 #guide {
-	background:#2dce6b;
+	background:#fff;
 	padding: 40px 0px 60px 0;
 	color: #fff;
 	box-shadow: 0 0 7px #ccc;
-	background-image: url("../images/bg.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+	
 }
 
 #guide h1 {
 	margin-bottom: 40px;
-	color: #777;
+	color: green;
 }
 
 .step {
@@ -172,7 +172,8 @@ body {
 	border-radius: 15px;
 	color: #fff;
 	position: relative;
-	background: #eee;
+	border:solid 1px #ccc;
+	box-shadow: 0 0 5px #ccc;
 }
 
 .step div {
@@ -199,6 +200,10 @@ body {
 	box-shadow: 0 0 7px #ccc;
 	background: #fcf9f7;
 	padding: 50px 0; 
+}
+
+#feedback h1 {
+ 	color: red;
 }
 
 #feedback-form {
