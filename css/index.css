@@ -1,18 +1,27 @@
+body {
+	background-color: #eee;
+}
+
 .container {
 	width: 77%;
 }
 
 .navbar {
-	background: #e21627 ;
-	border:solid  1px #333;
+	background: #fff ;
+	box-shadow: 4px 5px 7px #ccc;
 }
 
 .navbar-brand {
 	font-size: 32.5px;
+
+}
+
+.red {
+	color: red;
 }
 
 #main-title {
-	color: #fff;
+	color: red;
 	font-weight: bold;
 }
 
@@ -22,22 +31,49 @@
 
 #main {
 	background: #fff;
-	background: url('../images/bg.jpg');
 	background-position: center;
 	background-attachment: fixed;
-	min-height: 528px;
+	min-height: 460px;
 	background-repeat: no-repeat;
+	position: relative;
+	margin: 40px 0 55px 0;
+	box-shadow: 0 0 3px #ccc;
+}
+
+#search-form {
+	width: 70%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.nav-link {
+	font-size: 18px;
+}
+
+#tf {
+	font-size: 28px;
+	height: 60px;
+}
+
+#btn {
+	font-size: 28px;
+	background:red;
+	color: #fff;
 }
 
 #footer {
 	background: #333;
-	
+	box-shadow: 0 0 5px #ccc;
 }
 
 #footer  p{
+	text-align: center;
 	color: #fff;
 	margin: 0;
-	padding: 5px;
+	padding: 3px;
+	
 }
 
 #col-1 {
@@ -90,7 +126,7 @@
 	font-weight: bold;
 }
 
-.icons .fa {
+/*.icons .fa {
 	padding: 10px;
 	background: #4453c4;
 	font-size: 28px;
@@ -102,7 +138,7 @@
 	margin-right: 10px;
 	margin-top: 5px;
 }
-
+*/
 .icons .fa:hover {
 	background-color: #092756;
 	transition: 0.5s;
@@ -112,3 +148,61 @@
 	color: #eee;
 }
 
+#guide {
+	background:#2dce6b;
+	padding: 40px 0px 60px 0;
+	color: #fff;
+	box-shadow: 0 0 7px #ccc;
+	background-image: url("../images/bg.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#guide h1 {
+	margin-bottom: 40px;
+	color: #777;
+}
+
+.step {
+	height: 200px;
+	width: 100%;
+	padding: 20px 10px;
+	border-radius: 15px;
+	color: #fff;
+	position: relative;
+	background: #eee;
+}
+
+.step div {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.step h3 {
+	color: #333;
+}
+
+.step p {
+	font-size: 16px;
+	padding: 10px 10px;
+	color: #333;
+}
+
+.fas {
+	font-size: 30px;
+}
+#feedback {
+	box-shadow: 0 0 7px #ccc;
+	background: #fcf9f7;
+	padding: 50px 0; 
+}
+
+#feedback-form {
+	padding: 20px;
+	border:solid 1px #eee;
+	border-radius: 5px;
+}
