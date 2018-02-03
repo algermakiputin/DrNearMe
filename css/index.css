@@ -1,5 +1,5 @@
 body {
-	background-color: #f4f4f5;
+	background: #eee;
 }
 
 .container {
@@ -34,7 +34,6 @@ body {
 	background: #fff;
 	background-image: url("../images/bg.jpg");
 	background-position: center;
-	background-attachment: fixed;
 	min-height: 460px;
 	background-repeat: no-repeat;
 	position: relative;
@@ -52,6 +51,10 @@ body {
 	transform: translate(-50%,-50%);
 }
 
+#search-form p {
+	font-size: 19px;
+}
+
 .nav-link {
 	font-size: 18px;
 }
@@ -59,24 +62,26 @@ body {
 #tf {
 	font-size: 23px;
 	height: 60px;
+	box-shadow:  0 0 35px #ccc;
 }
 
 #btn {
 	font-size: 23px;
 	background:red;
 	color: #fff;
+	
 }
 
 #footer {
-	background: #333;
+	background: #fff;
 	box-shadow: 0 0 5px #ccc;
 }
 
 #footer  p{
 	text-align: center;
-	color: #fff;
+	color: #777;
 	margin: 0;
-	padding: 3px;
+	padding: 23px 0;
 	
 }
 
@@ -153,7 +158,7 @@ body {
 }
 
 #guide {
-	background:#fff;
+	background:#77867F;
 	padding: 40px 0px 60px 0;
 	color: #fff;
 	box-shadow: 0 0 7px #ccc;
@@ -162,7 +167,7 @@ body {
 
 #guide h1 {
 	margin-bottom: 40px;
-	color: green;
+	color: #fff;
 }
 
 .step {
@@ -172,7 +177,7 @@ body {
 	border-radius: 15px;
 	color: #fff;
 	position: relative;
-	border:solid 1px #ccc;
+
 	box-shadow: 0 0 5px #ccc;
 }
 
@@ -184,13 +189,13 @@ body {
 }
 
 .step h3 {
-	color: #333;
+	color: #fff;
 }
 
 .step p {
 	font-size: 16px;
 	padding: 10px 10px;
-	color: #333;
+	color: #fff;
 }
 
 .fas {
