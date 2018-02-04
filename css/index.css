@@ -34,10 +34,10 @@ body {
 	background: #fff;
 	background-image: url("../images/bg.jpg");
 	background-position: center;
-	min-height: 460px;
+	min-height: 490px;
 	background-repeat: no-repeat;
 	position: relative;
-	margin: 35px 0;
+	margin: 25px 0;
 	box-shadow: 0 0 3px #ccc;
 	
 
@@ -57,6 +57,11 @@ body {
 
 .nav-link {
 	font-size: 18px;
+}
+
+.nav-link:hover {
+	background: #eee;
+	border-radius: 3px;
 }
 
 #tf {
@@ -189,7 +194,7 @@ body {
 }
 
 .step h3 {
-	color: #fff;
+	color: #eee;
 }
 
 .step p {
@@ -215,4 +220,135 @@ body {
 	padding: 20px;
 	border:solid 1px #eee;
 	border-radius: 5px;
+}
+
+#load {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 1000;
+}
+
+.loader {
+	  border: 16px solid #f3f3f3;
+	  border-radius: 50%;
+	  border-top: 16px solid green;
+	  width: 120px;
+	  height: 120px;
+	  -webkit-animation: spin 2s linear infinite; /* Safari */
+	  animation: spin 2s linear infinite;
+	  left: 43%;
+	  top:40%;
+	  transform: translate(-50%,-50%,0);
+	  position: relative;
+	  z-index: 1000;
+}
+
+.show {
+	opacity: 0.8;
+	z-index: 100;
+}
+
+.hide {
+	display: none;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#map {
+	width: 100%;
+	height: 300px;
+}
+#page {
+
+}
+
+#results {
+	margin: 25px 0;
+	background: #fff;
+	padding: 20px;
+}
+
+.image {
+	width: 250px;
+	height:200px;
+	background: #eee;
+	position: relative;
+	border:solid 1px #ccc;
+}
+
+.image h1 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	color: #777;
+
+}
+
+.place-row {
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #ccc;
+}
+
+#search-result{
+	padding: 0;
+}
+
+#search-result li {
+	list-style-type: none;
+}
+
+.wrap {
+	box-shadow: 0 0 5px #ccc;
+	border-radius: 5px;
+	margin: 10px 0;
+	padding: 10px;
+	position: relative;
+}
+
+.direction {
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	background: #eee;
+	text-align: center;
+}
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+#result-header {
+	margin: 30px 0 20px 0;
+	font-size: 26px;
+}
+
+.wrap h3 {
+	font-size: 22px;
+}
+
+.fa-arrow-left {
+	position: absolute;
+	left: 0;
+	padding: 10px;
+	background: #eee;
+	color: 
 }
