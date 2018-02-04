@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 	var map;
 	var service;
@@ -9,7 +10,6 @@ $(document).ready(function(){
 
 	$("#searchForm").submit(function(event){
 		val = $("#tf").val();
-
 		if (val === "HIV") {
 			$('#result-header').text("Places for HIV treatment");
 		}else if (val === "dermatologists") {
@@ -17,7 +17,8 @@ $(document).ready(function(){
 		}else if (val === "psychiatrist") {
 			$("#result-header").text("Doctors/Places for Stress and Anxiety");
 		}
-		if (val == "default") {
+		
+		if (val === "default") {
 			alert('Please Select Your Condition')
 		}else {
 			query = val;
@@ -72,6 +73,7 @@ $(document).ready(function(){
 	  service = new google.maps.places.PlacesService(map);
 	  service.textSearch(request, callback);
 
+	  
 	}
 
 	function callback(result, status) {
@@ -96,7 +98,7 @@ $(document).ready(function(){
 					console.log(place);
 					var name = place.name;
 					var address = place.formatted_address;
-					var id = place.id;
+					var id = place.place_id;
 					
 					if (place.hasOwnProperty('formatted_phone_number')) {
 						var number = place.formatted_phone_number;
@@ -104,15 +106,16 @@ $(document).ready(function(){
 						number = "Not Available";
 					}
 
-				 	$("#search-result").append('<li><div class="wrap"><div class="direction"></div><h3>'+name+'</h3><p>'+address+'</p><p> Contact Number : '+number+'</p></div></li>');
+				 	$("#search-result").append('<li><div class="wrap"><div class="direction"></div><h3>'+name+'</h3><p>'+address+'</p><p> Contact Number : '+number+'</p><button value="'+id+'" id="'+id+'" class="directions">View Map <i class="fa fa-arrow-circle-right"></i></button></div></li>');
+				 	$("#"+id+"").click(function() {
+					    var btn_id = $(this).val();
+					    alert(btn_id);
+					});
 				}
-
-				
 		    }
-
-		    
+		  
 		 }
-		
+		 
 	}
 
 	function createMarker(place) {
@@ -128,8 +131,7 @@ $(document).ready(function(){
         });
       }
 
-	
-      
+
 	
 	
 });
