@@ -7,7 +7,12 @@ $(document).ready(function(){
 	var long;
 	var btn = $('#btn');
 	var query;
+	var placeID;
 
+	$("#close-map").click(function(){
+		$("#modal-map").removeClass('showmap');
+		$("#modal-map").addClass('hide');
+	});
 	$("#searchForm").submit(function(event){
 		val = $("#tf").val();
 		if (val === "HIV") {
@@ -39,7 +44,7 @@ $(document).ready(function(){
 	        navigator.geolocation.getCurrentPosition(function(position){
 	        	lat = position.coords.latitude; 
 	    		long = position.coords.longitude; 
-	    		console.log(lat + "  " + long)
+	    		
 	    		initialize(lat,long);
 	        },function (error) { 
 			  if (error.code == error.PERMISSION_DENIED)
@@ -78,11 +83,19 @@ $(document).ready(function(){
 
 	function callback(result, status) {
 	  	results = result;
-		
+		var count = 0;
 		if (status == google.maps.places.PlacesServiceStatus.OK) {
 			$("#load").addClass("hide");
 			$("#load").removeClass("show");
+
+			var place_map = new google.maps.Map(document.getElementById('place-map'), {
+			  zoom: 8,
+			  center: {lat: lat, lng: long}
+			});
+			var geocoder = new google.maps.Geocoder;
+			var infowindow = new google.maps.InfoWindow;
 		    for (var i = 0; i < results.length; i++) {
+		    	count++;
 		      var place = results[i];
 		      var place_id = results[i].place_id;
 		      createMarker(results[i]);
@@ -95,7 +108,6 @@ $(document).ready(function(){
 				service.getDetails(request, callback);
 
 				function callback(place, status) {
-					console.log(place);
 					var name = place.name;
 					var address = place.formatted_address;
 					var id = place.place_id;
@@ -107,13 +119,26 @@ $(document).ready(function(){
 					}
 
 				 	$("#search-result").append('<li><div class="wrap"><div class="direction"></div><h3>'+name+'</h3><p>'+address+'</p><p> Contact Number : '+number+'</p><button value="'+id+'" id="'+id+'" class="directions">View Map <i class="fa fa-arrow-circle-right"></i></button></div></li>');
+				 	
+				 	
 				 	$("#"+id+"").click(function() {
+				 		$("#modal-map").removeClass('hide');
+					    $("#modal-map").addClass('showmap');
 					    var btn_id = $(this).val();
-					    alert(btn_id);
+					    placeID = btn_id;
+						$("#place-name").text(name);
+					    geocodePlaceId(geocoder, place_map, infowindow, placeID);
+					    
+
 					});
+
+
+					$("#result_number").text(count);
+
 				}
 		    }
-		  
+	
+	
 		 }
 		 
 	}
@@ -133,5 +158,29 @@ $(document).ready(function(){
 
 
 	
-	
 });
+
+
+// This function is called when the user clicks the UI button requesting
+// a geocode of a place ID.
+function geocodePlaceId(geocoder, map, infowindow,placeID) {
+var placeId = placeID;
+geocoder.geocode({'placeId': placeId}, function(results, status) {
+  if (status === 'OK') {
+    if (results[0]) {
+      map.setZoom(15);
+      map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location
+      });
+      infowindow.setContent(results[0].formatted_address);
+      infowindow.open(map, marker);
+    } else {
+      window.alert('No results found');
+    }
+  } else {
+    window.alert('Geocoder failed due to: ' + status);
+  }
+});
+}

@@ -227,7 +227,7 @@ body {
 	width: 100%;
 	height: 100%;
 	background: #fff;
-	z-index: 1000;
+	z-index: 100;
 }
 
 .loader {
@@ -241,7 +241,7 @@ body {
 	  top:40%;
 	  transform: translate(-50%,-50%,0);
 	  position: relative;
-	  z-index: 1000;
+	  z-index: 100;
 }
 
 .show {
@@ -317,6 +317,12 @@ body {
 	position: relative;
 }
 
+.wrap h3 {
+	color: green;
+}
+
+
+
 .direction {
 	position: absolute;
 	top: 15px;
@@ -365,4 +371,57 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 .directions:hover {
 	background: #ccc;
 	cursor: hand;
+}
+
+#modal-map {
+	background: #77867F;
+	box-shadow: 3px 5px 10px #777;
+	position: fixed;
+	width: 80%;
+	height: 90%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 500;
+	padding: 10px;
+	border-radius: 5px;
+
+}
+
+#place-map {
+	padding: 20px;
+	width: 100%;
+	height: 90%;
+	opacity: 1;
+	overflow:visible;
+}
+
+.showmap {
+	opacity: 1;
+}
+
+#modal-map header {
+	z-index: 1000;
+	background: green;
+	width: 100%;
+}
+
+#modal-map header h4 {
+	float: left;
+	color: #fff;
+}
+
+#modal-map header span {
+	float: right;
+	color: #fff;
+}
+
+#close-map {
+	text-decoration: underline;
+	padding: 3px;
+}
+
+#close-map:hover {
+	cursor: pointer;
+
 }

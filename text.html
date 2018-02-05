@@ -73,6 +73,7 @@
                 position: results[0].geometry.location
               });
               infowindow.setContent(results[0].formatted_address);
+              infowindow.setContent(results[0].name);
               infowindow.open(map, marker);
             } else {
               window.alert('No results found');
