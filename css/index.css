@@ -1,3 +1,7 @@
+* {
+	font-family: 'Montserrat';
+
+}
 body {
 	background: #eee;
 }
@@ -23,11 +27,13 @@ body {
 #main-title {
 	color: red;
 	font-weight: bold;
+	font-weight: bolder;
 }
 
 #sub-title {
 	font-weight: bold;
 	color: green;
+	font-weight: bolder;
 }
 
 #main {
@@ -163,26 +169,29 @@ body {
 }
 
 #guide {
-	background:#77867F;
+	background:#40474b;
 	padding: 40px 0px 60px 0;
 	color: #fff;
 	box-shadow: 0 0 7px #ccc;
 	
 }
 
+
+
 #guide h1 {
 	margin-bottom: 40px;
 	color: #fff;
+
 }
 
 .step {
-	height: 200px;
+	height: 250px;
 	width: 100%;
-	padding: 20px 10px;
+	padding: 30px 10px;
 	border-radius: 15px;
 	color: #fff;
 	position: relative;
-
+	border-top: solid 3px #fff;
 	box-shadow: 0 0 5px #ccc;
 }
 
@@ -193,18 +202,22 @@ body {
 	transform: translate(-50%,-50%);
 }
 
-.step h3 {
-	color: #eee;
-}
+
 
 .step p {
 	font-size: 16px;
 	padding: 10px 10px;
-	color: #fff;
+	color: #eee;
+	margin-bottom: 0;
 }
 
-.fas {
+.step .fas {
 	font-size: 30px;
+	padding: 45px; 
+	border:solid 1px #eee;
+	border-radius: 50%;
+
+	margin-bottom: 15px;
 }
 #feedback {
 	box-shadow: 0 0 7px #ccc;
@@ -374,7 +387,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 }
 
 #modal-map {
-	background: #77867F;
+	background: #40474b;
 	box-shadow: 3px 5px 10px #777;
 	position: fixed;
 	width: 80%;
@@ -424,4 +437,9 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 #close-map:hover {
 	cursor: pointer;
 
+}
+
+#map:hover {
+
+	opacity: 1;
 }
