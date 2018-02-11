@@ -13,6 +13,7 @@ body {
 .navbar {
 	background: #fff ;
 	box-shadow: 4px 5px 7px #ccc;
+	padding: 10px;
 }
 
 .navbar-brand {
@@ -25,14 +26,16 @@ body {
 }
 
 #main-title {
-	color: red;
+	color: #FE5F55;
 	font-weight: bold;
 	font-weight: bolder;
+	font-size: 35px;
 }
 
 #sub-title {
+	font-size: 35px;
 	font-weight: bold;
-	color: green;
+	color: #23967F;
 	font-weight: bolder;
 }
 
@@ -63,6 +66,7 @@ body {
 
 .nav-link {
 	font-size: 18px;
+	color: #777 !important;
 }
 
 .nav-link:hover {
@@ -169,7 +173,7 @@ body {
 }
 
 #guide {
-	background:#40474b;
+	background:#23967F;
 	padding: 40px 0px 60px 0;
 	color: #fff;
 	box-shadow: 0 0 7px #ccc;
@@ -212,8 +216,8 @@ body {
 }
 
 .step .fas {
-	font-size: 30px;
-	padding: 45px; 
+	font-size: 55px;
+	padding: 30px; 
 	border:solid 1px #eee;
 	border-radius: 50%;
 
@@ -226,7 +230,7 @@ body {
 }
 
 #feedback h1 {
- 	color: red;
+ 	color: #777;
 }
 
 #feedback-form {
@@ -331,7 +335,7 @@ body {
 }
 
 .wrap h3 {
-	color: green;
+	color: #777;
 }
 
 
@@ -361,6 +365,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 
 .wrap h3 {
 	font-size: 22px;
+	color: green;
 }
 
 .fa-arrow-left {
@@ -442,4 +447,9 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 #map:hover {
 
 	opacity: 1;
+}
+
+#feedback-btn {
+	background: #23967F;
+	padding: 10px;
 }

@@ -9,6 +9,24 @@ $(document).ready(function(){
 	var query;
 	var placeID;
 
+	$('#feedback-form').submit(function( event ){
+		
+		name = $("#name").val();
+		email = $("#email").val();
+		message = $("#textarea").val();
+
+		if (name === "" || email === "" || message === "") {
+			alert('Please fill out all the the required fields');
+		}else {
+			alert('Thank you for sending us a message although we cannot read it.');
+			location.reload();
+		}
+		
+		
+		event.preventDefault();
+
+	});
+		
 	$("#close-map").click(function(){
 		$("#modal-map").removeClass('showmap');
 		$("#modal-map").addClass('hide');
@@ -157,30 +175,33 @@ $(document).ready(function(){
       }
 
 
-	
-});
+		
+	});
 
 
 // This function is called when the user clicks the UI button requesting
 // a geocode of a place ID.
-function geocodePlaceId(geocoder, map, infowindow,placeID) {
-var placeId = placeID;
-geocoder.geocode({'placeId': placeId}, function(results, status) {
-  if (status === 'OK') {
-    if (results[0]) {
-      map.setZoom(15);
-      map.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-        map: map,
-        position: results[0].geometry.location
-      });
-      infowindow.setContent(results[0].formatted_address);
-      infowindow.open(map, marker);
-    } else {
-      window.alert('No results found');
-    }
-  } else {
-    window.alert('Geocoder failed due to: ' + status);
-  }
-});
+	function geocodePlaceId(geocoder, map, infowindow,placeID) {
+	var placeId = placeID;
+	geocoder.geocode({'placeId': placeId}, function(results, status) {
+	  if (status === 'OK') {
+	    if (results[0]) {
+	      map.setZoom(15);
+	      map.setCenter(results[0].geometry.location);
+	      var marker = new google.maps.Marker({
+	        map: map,
+	        position: results[0].geometry.location
+	      });
+	      infowindow.setContent(results[0].formatted_address);
+	      infowindow.open(map, marker);
+	    } else {
+	      window.alert('No results found');
+	    }
+	  } else {
+	    window.alert('Geocoder failed due to: ' + status);
+	  }
+	});
+
+
+
 }
