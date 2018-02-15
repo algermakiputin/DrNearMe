@@ -22,7 +22,6 @@ $(document).ready(function(){
 			location.reload();
 		}
 		
-		
 		event.preventDefault();
 
 	});
@@ -31,7 +30,22 @@ $(document).ready(function(){
 		$("#modal-map").removeClass('showmap');
 		$("#modal-map").addClass('hide');
 	});
+
 	$("#searchForm").submit(function(event){
+		val = "";
+		if ($("#input-str").val() !== "") {
+			val = $("#input-str").val();
+			$('#result-header').text("Doctors/Places for " + val);
+			$("#page").addClass('hide');
+			$("#load").addClass("show");
+			$("#load").removeClass("hide");
+			$("#results").removeClass('hide');
+			$("#results").addClass('show');
+			query = val;
+			searchPlace();
+			event.preventDefault();
+		}
+
 		val = $("#tf").val();
 		if (val === "HIV") {
 			$('#result-header').text("Places for HIV treatment");
@@ -39,9 +53,17 @@ $(document).ready(function(){
 			$("#result-header").text("Doctors/Places for Skin Disorders");
 		}else if (val === "psychiatrist") {
 			$("#result-header").text("Doctors/Places for Stress and Anxiety");
+		}else if (val === "immunologist") {
+			$("#result-header").text("Doctors/Places for Allergies");
+		}else if (val === "Cardiologist") {
+			$("#result-header").text("Doctors/Places for Hypertension");
+		}else if (val === "Pediatrician") {
+			$("#result-header").text("Doctors/Places for Influenza & Pneumonia");
+		}else if (val === "Plastic surgeon") {
+			$("#result-header").text("Doctors/Places for Breast Cancer");
 		}
 		
-		if (val === "default") {
+		if (val === "default" && $("#input-str".val() === "")) {
 			alert('Please Select Your Condition')
 		}else {
 			query = val;
@@ -89,7 +111,6 @@ $(document).ready(function(){
 	  var request = {
 	    location: pyrmont,
 	    radius: '500',
-	    rankBy: google.maps.places.RankBy.DISTANCE,
 	    query: query
 	  };
 
@@ -107,7 +128,7 @@ $(document).ready(function(){
 			$("#load").removeClass("show");
 
 			var place_map = new google.maps.Map(document.getElementById('place-map'), {
-			  zoom: 8,
+			  zoom: 13,
 			  center: {lat: lat, lng: long}
 			});
 			var geocoder = new google.maps.Geocoder;
@@ -186,6 +207,7 @@ $(document).ready(function(){
 	geocoder.geocode({'placeId': placeId}, function(results, status) {
 	  if (status === 'OK') {
 	    if (results[0]) {
+	    	console.log(results[0]);
 	      map.setZoom(15);
 	      map.setCenter(results[0].geometry.location);
 	      var marker = new google.maps.Marker({

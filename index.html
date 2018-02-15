@@ -60,23 +60,48 @@
 				<h1 class="red">Find Help</h1>
 				<p>Find suitable doctor for your condition in your local area</p>
 			</div>
-				<form name="searchForm" id="searchForm">
+				<!-- <form name="searchForm" id="searchForm">
  
 					<div class="input-group mb-4">
-					  <select id="tf" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" name="select">
+					  <select id="tf" type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" name="select">
 					  	<option value="default">Select Condition</option>
 					  	<option value="HIV">HIV AIDS</option>
 					  	<option value="psychiatrist">Stress and Anxiety</option>
 					  	<option value="dermatologists">Skin, Hair, Nails Problems</option>
-
-					  	<option value="dermatologists">Moles, Scars, Acne or Skin Allergies</option>
-					  	
+					  	<option value="immunologist">Allergy</option>
+					  	<option value="Cardiologist">Hypertension</option>
+					  	<option value="dermatologists">Moles, Scars, Acne Removal or Skin Allergies</option>
+					  	<option value="Pediatrician">Influenza & Pneumonia</option>
+					  	<option value="Plastic surgeon">Breast Cancer</option>
 					  </select>
 					  <div class="input-group-append">
 					    <input type="submit" class="btn btn-outline-secondary" type="button" id="btn" value="Search">
 
 					  </div>
 					</div>
+				</form> -->
+				<form id="searchForm">
+				  <div class="form-row">
+				    <div class="col">
+				       <select id="tf" type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" name="select">
+					  	<option value="default">Select Condition</option>
+					  	<option value="HIV">HIV AIDS</option>
+					  	<option value="psychiatrist">Stress and Anxiety</option>
+					  	<option value="dermatologists">Skin, Hair, Nails Problems</option>
+					  	<option value="immunologist">Allergy</option>
+					  	<option value="Cardiologist">Hypertension</option>
+					  	<option value="dermatologists">Moles, Scars, Acne Removal or Skin Allergies</option>
+					  	<option value="Pediatrician">Influenza & Pneumonia</option>
+					  	<option value="Plastic surgeon">Breast Cancer</option>
+					  </select>
+				    </div>
+				     <span style="margin-top: 12px;">Or</span>
+				    <div class="col">
+				      <input type="text" class="form-control search-tf" id="input-str"  placeholder="Search Doctor">
+				    </div>
+				    <input type="submit" id="btn" value="Search" name="" class="btn">
+				  </div>
+
 				</form>
 			</div>
 		</section>
