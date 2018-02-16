@@ -32,21 +32,23 @@ $(document).ready(function(){
 	});
 
 	$("#searchForm").submit(function(event){
-		val = "";
-		if ($("#input-str").val() !== "") {
-			val = $("#input-str").val();
-			$('#result-header').text("Doctors/Places for " + val);
+		val = $("#tf").val();
+		search_val = $("#input-str").val();
+		if (search_val !== "") {
+			
+			$('#result-header').text("Doctors/Places for " + search_val);
 			$("#page").addClass('hide');
 			$("#load").addClass("show");
 			$("#load").removeClass("hide");
 			$("#results").removeClass('hide');
 			$("#results").addClass('show');
-			query = val;
+			query = search_val;
 			searchPlace();
 			event.preventDefault();
+			return false;
 		}
 
-		val = $("#tf").val();
+		
 		if (val === "HIV") {
 			$('#result-header').text("Places for HIV treatment");
 		}else if (val === "dermatologists") {
@@ -63,7 +65,7 @@ $(document).ready(function(){
 			$("#result-header").text("Doctors/Places for Breast Cancer");
 		}
 		
-		if (val === "default" && $("#input-str".val() === "")) {
+		if (val === "default" && search_val === "") {
 			alert('Please Select Your Condition')
 		}else {
 			query = val;
@@ -121,6 +123,14 @@ $(document).ready(function(){
 	}
 
 	function callback(result, status) {
+		if (status === "ZERO_RESULTS") {
+			$("#load").addClass("hide");
+			$("#load").removeClass("show");
+			alert('NO RESULT FOUND');
+			location.reload();
+			return false;
+		}
+		
 	  	results = result;
 		var count = 0;
 		if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -157,7 +167,7 @@ $(document).ready(function(){
 						number = "Not Available";
 					}
 
-				 	$("#search-result").append('<li><div class="wrap"><div class="direction"></div><h3>'+name+'</h3><p>'+address+'</p><p> Contact Number : '+number+'</p><button value="'+id+'" id="'+id+'" class="directions">View Map <i class="fa fa-arrow-circle-right"></i></button></div></li>');
+				 	$("#search-result").append('<li><div class="wrap"><div class="direction"></div><h3>'+name+'</h3><p>'+address+'</p><p> Contact Number : '+number+'</p><button value="'+id+'" id="'+id+'" class="directions btn btn-danger ">View Map <i class="fa fa-arrow-circle-right"></i></button></div></li>');
 				 	
 				 	
 				 	$("#"+id+"").click(function() {
