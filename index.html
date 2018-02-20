@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Find Near Hospital</title>
+	<title>Doctor Near Me - Find Hospital/Doctors In Your Local Area</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5cG4DJYtxywRRJV_IshiNPkhWA1nHSvo&libraries=places"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="shortcut icon" href="images/logo.png" />
 </head>
 
 <body>
@@ -31,8 +32,8 @@
 		<nav id="topnav" class="navbar navbar-expand-lg navbar-light ">
 			<div class="container">
 				<a class="navbar-brand" href="index.html"><span id="main-title">
-					<img src="images/logo.png">
-					Doctor</span> <span id="sub-title">NearMe</span>
+				
+					Doctor</span> <span id="sub-title">NearMe</span><br><span id="description">Find Doctors Near you</span>
 				</a>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				    <ul class="navbar-nav ml-auto">
@@ -40,10 +41,10 @@
 				        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				      </li>
 				      <li class="nav-item">
-				        <a class="nav-link" href="#">Overview</a>
+				        <a class="nav-link" href="#guide" id="guide-link">Overview</a>
 				      </li>
 				      <li class="nav-item">
-				        <a class="nav-link " href="#">Feedback</a>
+				        <a class="nav-link " href="#feedback" id="feedback-link">Feedback</a>
 				      </li>
 				    </ul>
 				  
@@ -81,29 +82,34 @@
 					  </div>
 					</div>
 				</form> -->
-				<form id="searchForm">
-				  <div class="form-row">
-				    <div class="col">
-				       <select id="tf" type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" name="select">
-					  	<option value="default">Select Condition</option>
-					  	<option value="HIV">HIV AIDS</option>
-					  	<option value="psychiatrist">Stress and Anxiety</option>
-					  	<option value="dermatologists">Skin, Hair, Nails Problems</option>
-					  	<option value="immunologist">Allergy</option>
-					  	<option value="Cardiologist">Hypertension</option>
-					  	<option value="dermatologists">Moles, Scars, Acne Removal or Skin Allergies</option>
-					  	<option value="Pediatrician">Influenza & Pneumonia</option>
-					  	<option value="Plastic surgeon">Breast Cancer</option>
-					  </select>
-				    </div>
-				     <span style="margin-top: 12px;">Or</span>
-				    <div class="col">
-				      <input type="text" class="form-control search-tf" id="input-str"  placeholder="Search Doctor">
-				    </div>
-				    <input type="submit" id="btn" value="Search" name="" class="btn">
-				  </div>
+				<div class="container">
+					<form id="searchForm">
+					  <div class="row">
+					    <div class="col-6">
+					       <select id="tf" type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" name="select">
+						  	<option value="default">Select Condition</option>
+						  	<option value="HIV">HIV AIDS</option>
+						  	<option value="psychiatrist">Stress and Anxiety</option>
+						  	<option value="dermatologists">Skin, Hair, Nails Problems</option>
+						  	<option value="immunologist">Allergy</option>
+						  	<option value="Pediatrician">Child physical, behavior, and mental health issues</option>
+						  	<option value="Cardiologist">Hypertension</option>
+						  	<option value="dermatologists">Moles, Scars, Acne Removal or Skin Allergies</option>
+						  	<option value="Pediatrician">Influenza & Pneumonia</option>
+						  	<option value="Plastic surgeon">Breast Cancer</option>
+						  </select>
+					    </div>
+					  	<span id="or">Or</span>
+					    <div class="col-5">
+					      <input type="text" class="form-control search-tf" id="input-str"  placeholder="Search Doctor">
+					    </div>
+					    <div class="col-1">
+					    	<input type="submit" id="btn" value="Search" name="" class="btn">
+						</div>
+					  </div>
 
-				</form>
+					</form>
+				</div>
 			</div>
 		</section>
 		
@@ -120,7 +126,7 @@
 							<div>
 								<i class="fas fa fa-cog"></i>
 							
-								<p>Select Condition</p>
+								<p>Select or Search Condition</p>
 							</div>
 						</div>
 					</div>

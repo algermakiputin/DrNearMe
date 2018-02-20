@@ -13,12 +13,12 @@ body {
 .navbar {
 	background: #fff ;
 	box-shadow: 4px 5px 7px #ccc;
-	padding: 10px;
+	padding: 30px;
 }
 
 .navbar-brand {
 	font-size: 32.5px;
-
+	line-height: 0.6;
 }
 
 .red {
@@ -27,16 +27,22 @@ body {
 
 #main-title {
 	color: #FE5F55;
-	font-weight: bold;
+
 	font-weight: bolder;
-	font-size: 35px;
+	font-size: 36px;
 }
 
 #sub-title {
-	font-size: 35px;
-	font-weight: bold;
+	font-size: 36px;
+
 	color: #23967F;
 	font-weight: bolder;
+}
+
+#description {
+	font-size: 14px;
+	padding-left: 3px;
+	font-weight: bold;
 }
 
 #main {
@@ -58,6 +64,14 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+}
+
+#or {
+	position: absolute;left: 50%;top:50%;transform: translate(-50%,-50%);font-size: 13px;
+}
+
+#search-form .row {
+	position: relative;
 }
 
 #search-form p {

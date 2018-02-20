@@ -9,6 +9,13 @@ $(document).ready(function(){
 	var query;
 	var placeID;
 
+	$("#guide-link, #feedback-link").click(function(){
+		$("#page").removeClass('hide');
+
+		$("#results").removeClass('show');
+		$("#results").addClass('hide');
+	})
+
 	$('#feedback-form').submit(function( event ){
 		
 		name = $("#name").val();
