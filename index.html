@@ -9,9 +9,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="shortcut icon" href="images/logo.png" />
 </head>
-
 <body>
 	<div id="modal-map" class="hide">
+		<div id="map-container">
+			
+		</div>
+		<div class="container">
 		<header>
 			<h4 id="place-name">Place Name</h4>
 			<span id="close-map">Close</span>
@@ -20,6 +23,7 @@
 		<div id="place-map">
 			
 		</div>
+	</div>
 	</div>
 	<div id="load" class="hide">
 		<div class="loader">
@@ -35,53 +39,23 @@
 				
 					Doctor</span> <span id="sub-title">NearMe</span><br><span id="description">Find Doctors Near you</span>
 				</a>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				    <ul class="navbar-nav ml-auto">
-				      <li class="nav-item active">
-				        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-				      </li>
-				      <li class="nav-item">
-				        <a class="nav-link" href="#guide" id="guide-link">Overview</a>
-				      </li>
-				      <li class="nav-item">
-				        <a class="nav-link " href="#feedback" id="feedback-link">Feedback</a>
-				      </li>
-				    </ul>
-				  
-				  </div>
+				<span class="ml-auto" style="color: #fff">
+					Usefull Link: <a href="#">Facebooks</a> <a href="#">Youtube</a>
+				</span>
 			</div>
 		</nav>
 	</header>
 	
 	<main id="page" class="">
-
-		<section id="main">
-
-			<div id="search-form">
-			<div class="text-center" >
-				<h1 class="red">Find Help</h1>
-				<p>Find suitable doctor for your condition in your local area</p>
+		<div class="main" id="main">
+			<div id="map_canvas" >
+		
 			</div>
-				<!-- <form name="searchForm" id="searchForm">
- 
-					<div class="input-group mb-4">
-					  <select id="tf" type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" name="select">
-					  	<option value="default">Select Condition</option>
-					  	<option value="HIV">HIV AIDS</option>
-					  	<option value="psychiatrist">Stress and Anxiety</option>
-					  	<option value="dermatologists">Skin, Hair, Nails Problems</option>
-					  	<option value="immunologist">Allergy</option>
-					  	<option value="Cardiologist">Hypertension</option>
-					  	<option value="dermatologists">Moles, Scars, Acne Removal or Skin Allergies</option>
-					  	<option value="Pediatrician">Influenza & Pneumonia</option>
-					  	<option value="Plastic surgeon">Breast Cancer</option>
-					  </select>
-					  <div class="input-group-append">
-					    <input type="submit" class="btn btn-outline-secondary" type="button" id="btn" value="Search">
-
-					  </div>
-					</div>
-				</form> -->
+			<div id="search-form" style="z-index: 1000;">
+				<div class="text-center" >
+					<h1 class="red">Find Help</h1>
+					<p>Find suitable doctor for your condition in your local area</p>
+				</div>
 				<div class="container">
 					<form id="searchForm">
 					  <div class="row">
@@ -111,104 +85,32 @@
 					</form>
 				</div>
 			</div>
-		</section>
-		
-		<section id="guide">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-md-12">
-						<h1>Quick Overview </h1>
-					</div>
-				</div>
-				<div class="row text-center">
-					<div class="col-md-4 ">
-						<div class="step">
-							<div>
-								<i class="fas fa fa-cog"></i>
-							
-								<p>Select or Search Condition</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 ">
-						<div class="step">
-							<div>
-								<i class="fa fas fa-hand-pointer"></i>
-							
-								<p>Click Search</p>
-							</div>
-							
-						</div>
-					</div>
-					<div class="col-md-4 ">
-						<div class="step">
-							<div>
-								<i class="fas fa-street-view"></i>
-								
-							<p>View doctors that might help you</p>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="feedback">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<h1>Feedback</h1>
-						<p>Send us about what do you think about our app or just say hi</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-8 mx-auto">
-						<form id="feedback-form">
-							<div class="form-group">
-								<label><span class="red">*</span> Name</label>
-								<input type="text" name="name" id="name" class="form-control">
-							</div>
-							<div class="form-group">
-								<label><span class="red">*</span> Email</label>
-								<input type="text" name="email" id="email" class="form-control">
-							</div>
-							<div class="form-group">
-								<label><span class="red">*</span> Message</label>
-								<textarea class="form-control" name="message" id="textarea" rows="6">
-									
-								</textarea>
-							</div>
-							<div class="form-group">
-								<input type="submit" id="feedback-btn" name="" class="btn btn-success form-control">
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
+		</div>
+	
 	</main>
 	<div id="results" class="hide">
-		<div class="container-fluid">
-			<div class="row">
-				<div id="map">
-					
-				</div>
-			</div>
+		
+		<div id="map">
+			
 		</div>
-		<div class="container row2">
+		
+		<div class="container ">
+			<div class="row2">
 			<div class="row ">
-				<div class="col-8 mx-auto text-center">
+				<div class="col-12 mx-auto text-center">
 				
 					<h2 id="result-header">Doctors or Places to HIV treatment</h2>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-8 mx-auto">
+				<div class="col-12 mx-auto" style="padding-right: 40px;padding-left: 40px;">
 					<p class="badge">Results: <span id="result_number"></span></p>
 					<ul id="search-result">
 					</ul>
+					<p class="badge">End of Results <span id="result_number"></span></p>
 				</div>
 			</div>
+		</div>
 		</div>
 	</div>
 	
