@@ -23,9 +23,6 @@ body {
 	line-height: 0.6;
 }
 
-.red {
-	color: red;
-}
 
 #main-title {
 	color: #fff;
@@ -87,7 +84,7 @@ body {
 
 #search-form h1 {
 	text-shadow: 0 0 2px #333;
-	color: royalblue;
+	color: orange;
 }
 
 .nav-link {
@@ -405,9 +402,9 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 
 #result-header {
 
-	text-transform: uppercase;
+
 	text-shadow: 0 0 2px #333;
-	color: royalblue;	
+	color: orange;	
 	padding: 23px 0;
 	margin-bottom: 10px;
 	font-weight: bolder;
