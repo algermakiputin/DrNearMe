@@ -218,7 +218,7 @@ $(document).ready(function(){
         var map = new google.maps.Map(map_canvas, map_options)
       }
       google.maps.event.addDomListener(window, 'load', initbg);
-  		clearMarkers();
+
 	function initialize(lat,long) {
 	  var pyrmont = new google.maps.LatLng(lat,long);
 

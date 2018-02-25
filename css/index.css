@@ -26,22 +26,22 @@ body {
 
 #main-title {
 	color: #fff;
-	font-family: arial;
-	font-weight: bolder;
-	font-size: 36px;
+	font-family: 'Montserrat';
+	font-weight: 700;
+	font-size: 38px;
 }
 
 #sub-title {
-	font-size: 36px;
-	font-family: arial;
+	font-size: 38px;
+
 	color: #fff;
-	font-weight: bolder;
+	font-weight: 700;
 }
 
 #description {
 	font-size: 16px;
 	padding-left: 3px;
-	font-weight: bold;
+	font-weight: 700;
 	color: #777;
 }
 
@@ -85,6 +85,7 @@ body {
 #search-form h1 {
 	text-shadow: 0 0 2px #333;
 	color: orange;
+	font-weight: 500;
 }
 
 .nav-link {
