@@ -78,7 +78,7 @@ body {
 
 #search-form p {
 	font-size: 19px;
-	color: #777;
+	color: #fff;
 	text-shadow: 0 0 2px #777;
 }
 
@@ -105,6 +105,7 @@ body {
 	border:none;
 	background: #777;
 	color: #fff;
+	
 }
 
 
