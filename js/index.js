@@ -232,7 +232,8 @@ $(document).ready(function(){
 	  var request = {
 	    location: pyrmont,
 	    radius: '500',
-	    query: query
+	    query: query,
+	    type: 'doctor'
 	  };
 
 	  service = new google.maps.places.PlacesService(map);
@@ -251,6 +252,7 @@ $(document).ready(function(){
 		}
 		
 	  	results = result;
+	  	console.log(result);
 		var count = 0;
 		if (status == google.maps.places.PlacesServiceStatus.OK) {
 			$("#load").addClass("hide");
@@ -331,8 +333,6 @@ $(document).ready(function(){
 	});
 
 
-// This function is called when the user clicks the UI button requesting
-// a geocode of a place ID.
 	function geocodePlaceId(geocoder, map, infowindow,placeID) {
 	var placeId = placeID;
 	geocoder.geocode({'placeId': placeId}, function(results, status) {
