@@ -233,7 +233,8 @@ $(document).ready(function(){
 	    location: pyrmont,
 	    radius: '500',
 	    query: query,
-	    type: 'doctor'
+	    type: 'doctor',
+	    rankBy: google.maps.places.RankBy.DISTANCE
 	  };
 
 	  service = new google.maps.places.PlacesService(map);
@@ -252,7 +253,7 @@ $(document).ready(function(){
 		}
 		
 	  	results = result;
-	  	console.log(result);
+
 		var count = 0;
 		if (status == google.maps.places.PlacesServiceStatus.OK) {
 			$("#load").addClass("hide");
